@@ -5,30 +5,21 @@
 * 时间分配：1-2天（5.25-5.26）
 
 ## 测试数据准备
-
----
-
 * 模拟地图环境写在了clean_module/src/test_dfs.cpp中，是一个4*4的网格图
 * 真实环境是在实验室G1027通过Gmapping建图用map_saver保存下来的map.yaml放在目录clean_module/config下
 
-##	扫地单元路径生成测试用例
----
 ### 输入
----
 模拟地图为4*4的网格图。有三种测试参数的输入，分别为mode=0, level=0; mode=1, level=0; mode=1, level=3。（mode代表扫地模式，level代表扫地强度）
 ### 预取的输出
----
 期望输出在clean_module/src/test_dfs.out中
 ### 评价准则
----
 对输出的字符串信息与标准答案test_dfs.out逐行比对
 ### 测试流程
----
-1．	终端运行 “cd ~/catkin_ws”
-2．	终端运行 “catkin_make”
-3．	终端运行 “rosrun clean_module test_dfs >> a.out”
-4．	终端运行 “diff a.out test_dfs.out”
-5．	如果diff没有输出任何信息，表示两文件没有差异，则测试成功，否则失败。
+1. 终端运行 “cd ~/catkin_ws”
+-  终端运行 “catkin_make”
+-  终端运行 “rosrun clean_module test_dfs >> a.out”
+-  终端运行 “diff a.out test_dfs.out”
+-  如果diff没有输出任何信息，表示两文件没有差异，则测试成功，否则失败。
 
 ### 输入
 ---
